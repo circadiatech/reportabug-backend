@@ -16,6 +16,8 @@ class Project(db.Model):
 class ProjectSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
         model = Project
+        fields = ("id", "title", "description", "api_key", "is_active")
+
 
 project_schema = ProjectSchema()
 projects_schema = ProjectSchema(many=True)
