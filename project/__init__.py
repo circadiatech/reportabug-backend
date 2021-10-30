@@ -11,6 +11,7 @@ migrate = Migrate(app, db)
 ma = Marshmallow(app)
 
 import controllers.notes
+import controllers.projects
 
 @app.route("/")
 def hello_world():
