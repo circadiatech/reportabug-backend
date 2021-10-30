@@ -16,5 +16,9 @@ import controllers.notes
 def hello_world():
     return jsonify(hello="world")
 
+@app.route("/atyab")
+def hello_testing():
+    return jsonify(hello="testing")
+
 if __name__ == '__main__':
 	app.run()
