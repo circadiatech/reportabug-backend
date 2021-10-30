@@ -11,14 +11,11 @@ migrate = Migrate(app, db)
 ma = Marshmallow(app)
 
 import controllers.notes
+import  controllers.projects
 
 @app.route("/")
 def hello_world():
     return jsonify(hello="world")
-
-@app.route("/atyab")
-def hello_testing():
-    return jsonify(hello="testing")
 
 if __name__ == '__main__':
 	app.run()

@@ -4,7 +4,7 @@ from project import app
 from services.projects import create_project
 
 
-@app.route('/projects/', methods=['POST'])
+@app.route('/projects', methods=['POST'])
 def create_projects():
     data = request.get_json()
     if not 'title' in data:
@@ -12,5 +12,5 @@ def create_projects():
             'error': 'Bad Request',
             'message': 'title of projects is not given'
         }), 400
-    note = create_project(data)
-    return note
+    project = create_project(data)
+    return project
