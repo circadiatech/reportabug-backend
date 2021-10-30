@@ -10,3 +10,12 @@ def fetch_all_projects():
 def fetch_project(id):
     project = Project.query.filter_by(id=id).first_or_404()
     return project_schema.dump(project)
+
+
+def delete_project(id):
+    project = Project.query.filter_by(id=id).first_or_404()
+    db.session.delete(project)
+    db.session.commit()
+    return {
+        'success': 'Data deleted successfully'
+    }
