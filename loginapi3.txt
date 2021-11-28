@@ -1,0 +1,31 @@
+{
+    "status": {
+        "type": "success",
+        "code": 200,
+        "message": "MFA is required for this user",
+        "error": false
+    },
+    "data": [
+        {
+            "user": {
+                "email": "jennifer.hasenfus@onelogin.com",
+                "username": "jhasenfus",
+                "firstname": "Jennifer",
+                "lastname": "Hasenfus",
+                "id": 88888888
+            },
+            "state_token": "xf4330878444597bd3933d4247cc1xxxxxxxxxxx",
+            "callback_url": "https://api.us.onelogin.com/api/1/login/verify_factor",
+            "devices": [
+                {
+                    "device_type": "OneLogin OTP SMS",
+                    "device_id": 111111
+                },
+                {
+                    "device_type": "Google Authenticator",
+                    "device_id": 444444
+                }
+            ]
+        }
+    ]
+}

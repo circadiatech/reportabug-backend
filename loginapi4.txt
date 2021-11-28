@@ -1,0 +1,9 @@
+curl 'https://<api-domain>/api/1/login/auth' \
+-X POST \
+-H "Authorization: bearer: <access_token>" \
+-H "Content-Type: application/json" \
+-d '{
+    "username_or_email": "<username_or_email>",
+    "password": "<password>",
+    "subdomain": "<subdomain>"
+}'
